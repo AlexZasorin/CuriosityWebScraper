@@ -5,8 +5,6 @@ import requests
 from bs4 import BeautifulSoup
 
 
-# TODO: Add some try-excepts
-
 # Path to save curiosity images to
 pathname = os.path.abspath("curios")
 
@@ -69,6 +67,6 @@ for row in table.find_all("tr"):
         }
         curio_list.append(data)
 
-# TODO: Populate Postgres database with this data
+# TODO: Populate Postgres/SQLite database with this data
 for item in curio_list:
     print(item)
